@@ -1,0 +1,142 @@
+[
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/drawable_ekamdava_board_.png.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/drawable/ekamdava_board_.png"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/xml_backup_rules.xml.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/layout_activity_game.xml.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/layout/activity_game.xml"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/layout_activity_main.xml.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/layout_activity_game2.xml.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/layout/activity_game2.xml"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/drawable_ekamdava_board_picture.png.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/drawable/ekamdava_board_picture.png"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/drawable_ekamdava_dice_4.png.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/drawable/ekamdava_dice_4.png"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/layout_content_game.xml.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/layout/content_game.xml"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/layout_fragment_second.xml.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/layout/fragment_second.xml"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/drawable_ekamdava_dice_2.png.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/drawable/ekamdava_dice_2.png"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/drawable_highlight_border.xml.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/drawable/highlight_border.xml"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/drawable_yellow_piece.png.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/drawable/yellow_piece.png"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/drawable_ekamdava_dice_1.png.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/drawable/ekamdava_dice_1.png"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/layout_fragment_first.xml.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/layout/fragment_first.xml"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/navigation_nav_graph.xml.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/drawable_green_piece.png.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/drawable/green_piece.png"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/drawable_blue_piece.png.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/drawable/blue_piece.png"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/drawable_orange_piece.png.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/drawable/orange_piece.png"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/drawable_ekamdava_dice_3.png.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/drawable/ekamdava_dice_3.png"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.ekamdava_basic.app-merged_res-47:/drawable_ekamdava_dice_8.png.flat",
+        "source": "com.example.ekamdava_basic.app-main-49:/drawable/ekamdava_dice_8.png"
+    }
+]

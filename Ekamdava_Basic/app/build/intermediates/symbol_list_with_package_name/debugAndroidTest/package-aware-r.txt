@@ -1,0 +1,3 @@
+com.example.ekamdava_basic.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

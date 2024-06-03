@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".GameActivity">
+
+    <ImageView
+        android:id="@+id/ekamdava_board"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ekamdava_board_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/diceImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ekamdava_dice_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ekamdava_board" />
+
+    <Button
+        android:id="@+id/rollButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Roll"
+        android:backgroundTint="@color/Orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/diceImageView" />
+
+    <ImageView
+        android:id="@+id/orange1"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="198dp"
+        android:layout_marginTop="316dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/orange_piece" />
+
+    <ImageView
+        android:id="@+id/orange2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="198dp"
+        android:layout_marginTop="360dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/orange_piece" />
+    <ImageView
+        android:id="@+id/orange3"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="336dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/orange_piece" />
+
+    <ImageView
+        android:id="@+id/orange4"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="336dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/orange_piece" />
+
+    <ImageView
+        android:id="@+id/blue1"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="324dp"
+        android:layout_marginTop="192dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/blue_piece" />
+
+    <ImageView
+        android:id="@+id/blue2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="368dp"
+        android:layout_marginTop="192dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/blue_piece" />
+
+    <ImageView
+        android:id="@+id/blue3"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="348dp"
+        android:layout_marginTop="212dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/blue_piece" />
+
+    <ImageView
+        android:id="@+id/blue4"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="348dp"
+        android:layout_marginTop="168dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/blue_piece" />
+
+    <ImageView
+        android:id="@+id/yellow1"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="198dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/yellow_piece" />
+
+    <ImageView
+        android:id="@+id/yellow2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/yellow_piece" />
+
+    <ImageView
+        android:id="@+id/yellow3"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/yellow_piece" />
+
+    <ImageView
+        android:id="@+id/yellow4"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="198dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/yellow_piece" />
+
+    <ImageView
+        android:id="@+id/green1"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="168dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/green_piece" />
+
+    <ImageView
+        android:id="@+id/green2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="192dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/green_piece" />
+
+    <ImageView
+        android:id="@+id/green3"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="192dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/green_piece" />
+
+    <ImageView
+        android:id="@+id/green4"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="212dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/green_piece" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
