@@ -18,10 +18,18 @@ class GameActivity : AppCompatActivity() {
     private var currentPlayerIndex = 0
     private var lastkill = false
     private var lastwin = false
+    private var change = 74
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_game2)
+        val densityDpi = resources.displayMetrics.densityDpi
+        if (densityDpi == 440) {
+            change = 73
+            setContentView(R.layout.activity_game)
+        } else {
+            change = 74
+            setContentView(R.layout.activity_game2)
+        }
 
         val numPlayers = intent.getIntExtra("NUM_PLAYERS", 2)
         removeExcessPieces(numPlayers)
@@ -333,7 +341,7 @@ class GameActivity : AppCompatActivity() {
     private fun moveUp(piece: View, index: Int) {
         val layoutParams = piece.layoutParams as ConstraintLayout.LayoutParams
         val density = resources.displayMetrics.density
-        val change = 74
+//        val change = 74
         val px = (change * density).toInt()
         layoutParams.topMargin -= px
         piece.layoutParams = layoutParams
@@ -346,7 +354,7 @@ class GameActivity : AppCompatActivity() {
     private fun moveDown(piece: View, index: Int) {
         val layoutParams = piece.layoutParams as ConstraintLayout.LayoutParams
         val density = resources.displayMetrics.density
-        val change = 74
+//        val change = 74
         val px = (change * density).toInt()
         layoutParams.topMargin += px
         piece.layoutParams = layoutParams
@@ -360,7 +368,7 @@ class GameActivity : AppCompatActivity() {
     private fun moveLeft(piece: View, index: Int) {
         val layoutParams = piece.layoutParams as ConstraintLayout.LayoutParams
         val density = resources.displayMetrics.density
-        val change = 74
+//        val change = 74
         val px = (change * density).toInt()
         layoutParams.marginStart -= px
         piece.layoutParams = layoutParams
@@ -373,7 +381,7 @@ class GameActivity : AppCompatActivity() {
     private fun moveRight(piece: View, index: Int) {
         val layoutParams = piece.layoutParams as ConstraintLayout.LayoutParams
         val density = resources.displayMetrics.density
-        val change = 74
+//        val change = 74
         val px = (change * density).toInt()
         layoutParams.marginStart += px
         piece.layoutParams = layoutParams

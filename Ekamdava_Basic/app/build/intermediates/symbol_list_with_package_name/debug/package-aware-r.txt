@@ -3329,7 +3329,6 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id fab
 id fade
 id fill
 id fill_horizontal
@@ -3630,7 +3629,6 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
-id toolbar
 id top
 id topPanel
 id touch_outside

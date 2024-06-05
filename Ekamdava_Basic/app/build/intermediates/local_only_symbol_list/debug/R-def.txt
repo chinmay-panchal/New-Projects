@@ -36,7 +36,6 @@ id button_first
 id button_second
 id diceImageView
 id ekamdava_board
-id fab
 id green1
 id green2
 id green3
@@ -51,7 +50,6 @@ id rollButton
 id textView
 id textview_first
 id textview_second
-id toolbar
 id yellow1
 id yellow2
 id yellow3

@@ -1,35 +1,222 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
+    android:background="@color/white"
     tools:context=".GameActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <ImageView
+        android:id="@+id/ekamdava_board"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ekamdava_board_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/diceImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ekamdava_dice_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ekamdava_board" />
+
+    <Button
+        android:id="@+id/rollButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:fitsSystemWindows="true"
-        >
+        android:layout_marginTop="32dp"
+        android:text="Roll"
+        android:backgroundTint="@color/Orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/diceImageView" />
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width = "match_parent"
-            android:layout_height = "?attr/actionBarSize" />
+    <ImageView
+        android:id="@+id/orange1"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="189dp"
+        android:layout_marginTop="314dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/orange_piece" />
 
-  </com.google.android.material.appbar.AppBarLayout>
+    <ImageView
+        android:id="@+id/orange2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="189dp"
+        android:layout_marginTop="360dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/orange_piece" />
 
-  <include layout="@layout/content_game"/>
+    <ImageView
+        android:id="@+id/orange3"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="166dp"
+        android:layout_marginTop="336dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/orange_piece" />
 
-  <com.google.android.material.floatingactionbutton.FloatingActionButton
-  android:id="@+id/fab"
-  android:layout_width="wrap_content"
-  android:layout_height="wrap_content"
-  android:layout_gravity="bottom|end"
-  android:layout_marginEnd="@dimen/fab_margin"
-  android:layout_marginBottom="16dp"
-  app:srcCompat="@android:drawable/ic_dialog_email" />
+    <ImageView
+        android:id="@+id/orange4"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="336dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/orange_piece" />
 
-  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <ImageView
+        android:id="@+id/blue1"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="312dp"
+        android:layout_marginTop="190dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/blue_piece" />
+
+    <ImageView
+        android:id="@+id/blue2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="358dp"
+        android:layout_marginTop="190dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/blue_piece" />
+
+    <ImageView
+        android:id="@+id/blue3"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="335dp"
+        android:layout_marginTop="214dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/blue_piece" />
+
+    <ImageView
+        android:id="@+id/blue4"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="335dp"
+        android:layout_marginTop="168dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/blue_piece" />
+
+    <ImageView
+        android:id="@+id/yellow1"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="189dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/yellow_piece" />
+
+    <ImageView
+        android:id="@+id/yellow2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="166dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/yellow_piece" />
+
+    <ImageView
+        android:id="@+id/yellow3"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/yellow_piece" />
+
+    <ImageView
+        android:id="@+id/yellow4"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="189dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/yellow_piece" />
+
+    <ImageView
+        android:id="@+id/green1"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="168dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/green_piece" />
+
+    <ImageView
+        android:id="@+id/green2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="190dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/green_piece" />
+
+    <ImageView
+        android:id="@+id/green3"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="190dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/green_piece" />
+
+    <ImageView
+        android:id="@+id/green4"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="214dp"
+        app:layout_constraintRight_toRightOf="@id/ekamdava_board"
+        app:layout_constraintStart_toStartOf="@id/ekamdava_board"
+        app:layout_constraintTop_toTopOf="@id/ekamdava_board"
+        app:srcCompat="@drawable/green_piece" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
