@@ -58,6 +58,7 @@ layout activity_game
 layout activity_game2
 layout activity_main
 layout content_game
+layout dpi320
 layout fragment_first
 layout fragment_second
 mipmap ic_launcher

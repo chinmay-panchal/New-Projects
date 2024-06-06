@@ -8,8 +8,8 @@
         "source": "C:\\Users\\chinmay panchal\\.gradle\\daemon\\8.0\\com.example.ekamdava_basic.app-main-49:\\layout\\activity_game.xml"
     },
     {
-        "merged": "com.example.ekamdava_basic.app-mergeDebugResources-46:/layout/activity_game.xml",
-        "source": "com.example.ekamdava_basic.app-main-49:/layout/activity_game.xml"
+        "merged": "com.example.ekamdava_basic.app-mergeDebugResources-46:/layout/dpi320.xml",
+        "source": "com.example.ekamdava_basic.app-main-49:/layout/dpi320.xml"
     },
     {
         "merged": "C:\\Users\\chinmay panchal\\.gradle\\daemon\\8.0\\com.example.ekamdava_basic.app-mergeDebugResources-46:\\layout\\fragment_first.xml",

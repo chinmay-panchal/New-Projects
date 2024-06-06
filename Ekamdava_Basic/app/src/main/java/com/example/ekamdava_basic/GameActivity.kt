@@ -23,10 +23,15 @@ class GameActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val densityDpi = resources.displayMetrics.densityDpi
+        Toast.makeText(this, "Dpi : ${densityDpi}", Toast.LENGTH_SHORT).show()
         if (densityDpi == 440) {
             change = 73
             setContentView(R.layout.activity_game)
-        } else {
+        }
+        else if(densityDpi == 320) {
+            change = 68
+            setContentView(R.layout.dpi320)
+        }else { //220, 420, 540
             change = 74
             setContentView(R.layout.activity_game2)
         }
