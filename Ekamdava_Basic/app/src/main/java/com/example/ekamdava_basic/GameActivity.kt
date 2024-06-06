@@ -31,7 +31,7 @@ class GameActivity : AppCompatActivity() {
         else if(densityDpi == 320) {
             change = 68
             setContentView(R.layout.dpi320)
-        }else { //220, 420, 540
+        }else { //220, 420, 560
             change = 74
             setContentView(R.layout.activity_game2)
         }
@@ -82,6 +82,7 @@ class GameActivity : AppCompatActivity() {
         )
 
         rollButton.setOnClickListener {
+
             lastkill = false
             lastwin = false
             rollButton.isEnabled = false
@@ -94,6 +95,7 @@ class GameActivity : AppCompatActivity() {
             else{
                 currentPlayer.pieces.forEachIndexed { index, piece ->
                     piece.bringToFront()
+
                     if(currentPlayer.positions[index]==Pair(2,2)){
                         piece.isClickable = false
                     }
@@ -102,7 +104,7 @@ class GameActivity : AppCompatActivity() {
                         piece.setOnClickListener {
 //                            Toast.makeText(this, "you clicked piece", Toast.LENGTH_SHORT).show()
                             disableAllPieces()
-                            movePiece(piece, index, diceroll,numPlayers)
+                            movePiece(piece, index, diceroll,numPlayers,densityDpi)
                             if(currentPlayer.eligibility==true){
                                 if(currentPlayer.won==false){
                                     if (players[currentPlayerIndex].positions.all { it == Pair(2, 2) }) {
@@ -169,7 +171,7 @@ class GameActivity : AppCompatActivity() {
 //        Toast.makeText(this, "Current Player: ${players[currentPlayerIndex].color}", Toast.LENGTH_SHORT).show()
     }
 
-    private fun movePiece(piece: View, index: Int, steps: Int,numPlayers: Int) {
+    private fun movePiece(piece: View, index: Int, steps: Int,numPlayers: Int, densityDpi: Int) {
         val currentPlayer = players[currentPlayerIndex]
         val entryGate = currentPlayer.entryGates
         val winningGate = currentPlayer.winningGates
@@ -231,11 +233,11 @@ class GameActivity : AppCompatActivity() {
         // lets check if the possibility to kill a piece exist or not, if exist then kill that piece
         var currentPosition: Pair<Int,Int> = Pair(currentPlayer.positions[index].first, currentPlayer.positions[index].second)
         if(!(currentPosition==Pair(0,2)|| currentPosition==Pair(2,0) || currentPosition==Pair(2,4) || currentPosition==Pair(4,2))) {
-            killpiece(currentPlayer,currentPosition,numPlayers)
+            killpiece(currentPlayer,currentPosition,numPlayers, densityDpi)
         }
     }
 
-    private fun killpiece(currentPlayer: Player, currentPosition: Pair<Int,Int>, numPlayers: Int){
+    private fun killpiece(currentPlayer: Player, currentPosition: Pair<Int,Int>, numPlayers: Int, densityDpi: Int){
         for (i in 0 until 4) {
             if(numPlayers==2){if(i==1 || i==3){continue}}
             if(numPlayers==3){if(i==3){continue}}
@@ -245,7 +247,7 @@ class GameActivity : AppCompatActivity() {
                 for (j in 0 until 4) {
                     if (currentPosition == players[i].positions[j] && currentPosition!=Pair(2,2)) {
                         var piece = players[i].pieces[j]
-                        resetMargins(piece, players[i], j)
+                        resetMargins(piece, players[i], j, densityDpi)
                         currentPlayer.eligibility = true
                         lastkill = true
                         break;
@@ -255,85 +257,229 @@ class GameActivity : AppCompatActivity() {
         }
     }
 
-    private fun resetMargins(piece: View, player: Player, index: Int) {
+    private fun resetMargins(piece: View, player: Player, index: Int, densityDpi: Int) {
         val layoutParams = piece.layoutParams as ConstraintLayout.LayoutParams
         val density = resources.displayMetrics.density
 
-        if(player.color=="Orange"){
-            if(index==0){
-                layoutParams.topMargin = 830
-                layoutParams.marginStart = 520
+        if(densityDpi==320){
+            if(player.color=="Orange"){
+                if(index==0){
+                    layoutParams.topMargin = 612
+                    layoutParams.marginStart = 344
+                }
+                else if(index==1){
+                    layoutParams.topMargin = 692
+                    layoutParams.marginStart = 344
+                }
+                else if(index==2){
+                    layoutParams.topMargin = 656
+                    layoutParams.marginStart = 300
+                }
+                else{//index==3
+                    layoutParams.topMargin = 656
+                    layoutParams.marginStart = 384
+                }
+                player.positions[index]=Pair(4,2)
             }
-            else if(index==1){
-                layoutParams.topMargin = 945
-                layoutParams.marginStart = 520
+            else if(player.color=="Green"){
+                if(index==0){
+                    layoutParams.topMargin = 340
+                    layoutParams.marginStart = 76
+                }
+                else if(index==1){
+                    layoutParams.topMargin = 384
+                    layoutParams.marginStart = 32
+                }
+                else if(index==2){
+                    layoutParams.topMargin = 384
+                    layoutParams.marginStart = 116
+                }
+                else{//index==3
+                    layoutParams.topMargin = 420
+                    layoutParams.marginStart = 76
+                }
+                player.positions[index]=Pair(2,0)
             }
-            else if(index==2){
-                layoutParams.topMargin = 882
-                layoutParams.marginStart = 452
+            else if(player.color=="Yellow"){
+                if(index==0){
+                    layoutParams.topMargin = 68
+                    layoutParams.marginStart = 344
+                }
+                else if(index==1){
+                    layoutParams.topMargin = 112
+                    layoutParams.marginStart = 300
+                }
+                else if(index==2){
+                    layoutParams.topMargin = 148
+                    layoutParams.marginStart = 344
+                }
+                else{//index==3
+                    layoutParams.topMargin = 112
+                    layoutParams.marginStart = 384
+                }
+                player.positions[index]=Pair(0,2)
             }
-            else{//index==3
-                layoutParams.topMargin = 882
-                layoutParams.marginStart = 588
+            else{// player.color=="Blue"
+                if(index==0){
+                    layoutParams.topMargin = 384
+                    layoutParams.marginStart = 572
+                }
+                else if(index==1){
+                    layoutParams.topMargin = 384
+                    layoutParams.marginStart = 656
+                }
+                else if(index==2){
+                    layoutParams.topMargin = 420
+                    layoutParams.marginStart = 616
+                }
+                else{//index==3
+                    layoutParams.topMargin = 340
+                    layoutParams.marginStart = 616
+                }
+                player.positions[index]=Pair(2,4)
             }
-            player.positions[index]=Pair(4,2)
         }
-        else if(player.color=="Green"){
-            if(index==0){
-                layoutParams.topMargin = 441
-                layoutParams.marginStart = 137
+        else if(densityDpi==440){
+            if(player.color=="Orange"){
+                if(index==0){
+                    layoutParams.topMargin = 864
+                    layoutParams.marginStart = 520
+                }
+                else if(index==1){
+                    layoutParams.topMargin = 990
+                    layoutParams.marginStart = 520
+                }
+                else if(index==2){
+                    layoutParams.topMargin = 924
+                    layoutParams.marginStart = 457
+                }
+                else{//index==3
+                    layoutParams.topMargin = 924
+                    layoutParams.marginStart = 583
+                }
+                player.positions[index]=Pair(4,2)
             }
-            else if(index==1){
-                layoutParams.topMargin = 504
-                layoutParams.marginStart = 74
+            else if(player.color=="Green"){
+                if(index==0){
+                    layoutParams.topMargin = 462
+                    layoutParams.marginStart = 118
+                }
+                else if(index==1){
+                    layoutParams.topMargin = 523
+                    layoutParams.marginStart = 55
+                }
+                else if(index==2){
+                    layoutParams.topMargin = 523
+                    layoutParams.marginStart = 182
+                }
+                else{//index==3
+                    layoutParams.topMargin = 589
+                    layoutParams.marginStart = 118
+                }
+                player.positions[index]=Pair(2,0)
             }
-            else if(index==2){
-                layoutParams.topMargin = 504
-                layoutParams.marginStart = 200
+            else if(player.color=="Yellow"){
+                if(index==0){
+                    layoutParams.topMargin = 61
+                    layoutParams.marginStart = 520
+                }
+                else if(index==1){
+                    layoutParams.topMargin = 121
+                    layoutParams.marginStart = 457
+                }
+                else if(index==2){
+                    layoutParams.topMargin = 121
+                    layoutParams.marginStart = 583
+                }
+                else{//index==3
+                    layoutParams.topMargin = 187
+                    layoutParams.marginStart = 520
+                }
+                player.positions[index]=Pair(0,2)
             }
-            else{//index==3
-                layoutParams.topMargin = 557
-                layoutParams.marginStart = 137
+            else{// player.color=="Blue"
+                if(index==0){
+                    layoutParams.topMargin = 523
+                    layoutParams.marginStart = 858
+                }
+                else if(index==1){
+                    layoutParams.topMargin = 523
+                    layoutParams.marginStart = 985
+                }
+                else if(index==2){
+                    layoutParams.topMargin = 589
+                    layoutParams.marginStart = 921
+                }
+                else{//index==3
+                    layoutParams.topMargin = 462
+                    layoutParams.marginStart = 921
+                }
+                player.positions[index]=Pair(2,4)
             }
-            player.positions[index]=Pair(2,0)
         }
-        else if(player.color=="Yellow"){
-            if(index==0){
-                layoutParams.topMargin = 53
-                layoutParams.marginStart = 520
+        else
+        {
+            if (player.color == "Orange") {
+                if (index == 0) {
+                    layoutParams.topMargin = 830
+                    layoutParams.marginStart = 520
+                } else if (index == 1) {
+                    layoutParams.topMargin = 945
+                    layoutParams.marginStart = 520
+                } else if (index == 2) {
+                    layoutParams.topMargin = 882
+                    layoutParams.marginStart = 452
+                } else {//index==3
+                    layoutParams.topMargin = 882
+                    layoutParams.marginStart = 588
+                }
+                player.positions[index] = Pair(4, 2)
+            } else if (player.color == "Green") {
+                if (index == 0) {
+                    layoutParams.topMargin = 441
+                    layoutParams.marginStart = 137
+                } else if (index == 1) {
+                    layoutParams.topMargin = 504
+                    layoutParams.marginStart = 74
+                } else if (index == 2) {
+                    layoutParams.topMargin = 504
+                    layoutParams.marginStart = 200
+                } else {//index==3
+                    layoutParams.topMargin = 557
+                    layoutParams.marginStart = 137
+                }
+                player.positions[index] = Pair(2, 0)
+            } else if (player.color == "Yellow") {
+                if (index == 0) {
+                    layoutParams.topMargin = 53
+                    layoutParams.marginStart = 520
+                } else if (index == 1) {
+                    layoutParams.topMargin = 105
+                    layoutParams.marginStart = 452
+                } else if (index == 2) {
+                    layoutParams.topMargin = 105
+                    layoutParams.marginStart = 588
+                } else {//index==3
+                    layoutParams.topMargin = 168
+                    layoutParams.marginStart = 520
+                }
+                player.positions[index] = Pair(0, 2)
+            } else {// player.color=="Blue"
+                if (index == 0) {
+                    layoutParams.topMargin = 504
+                    layoutParams.marginStart = 851
+                } else if (index == 1) {
+                    layoutParams.topMargin = 504
+                    layoutParams.marginStart = 966
+                } else if (index == 2) {
+                    layoutParams.topMargin = 557
+                    layoutParams.marginStart = 914
+                } else {//index==3
+                    layoutParams.topMargin = 441
+                    layoutParams.marginStart = 914
+                }
+                player.positions[index] = Pair(2, 4)
             }
-            else if(index==1){
-                layoutParams.topMargin = 105
-                layoutParams.marginStart = 452
-            }
-            else if(index==2){
-                layoutParams.topMargin = 105
-                layoutParams.marginStart = 588
-            }
-            else{//index==3
-                layoutParams.topMargin = 168
-                layoutParams.marginStart = 520
-            }
-            player.positions[index]=Pair(0,2)
-        }
-        else{// player.color=="Blue"
-            if(index==0){
-                layoutParams.topMargin = 504
-                layoutParams.marginStart = 851
-            }
-            else if(index==1){
-                layoutParams.topMargin = 504
-                layoutParams.marginStart = 966
-            }
-            else if(index==2){
-                layoutParams.topMargin = 557
-                layoutParams.marginStart = 914
-            }
-            else{//index==3
-                layoutParams.topMargin = 441
-                layoutParams.marginStart = 914
-            }
-            player.positions[index]=Pair(2,4)
         }
 
         piece.layoutParams = layoutParams
