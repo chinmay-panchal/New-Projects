@@ -5,13 +5,20 @@ import android.content.ClipboardManager
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.lifecycle.lifecycleScope
 import com.google.ai.client.generativeai.GenerativeModel
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
 
 class MainActivity2 : AppCompatActivity() {
+
+    private val tag = "MainActivity2"
+    private val maxRetries = 3
+    private val retryDelayMs = 2000L
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
@@ -29,31 +36,51 @@ class MainActivity2 : AppCompatActivity() {
         }
 
         button.setOnClickListener {
-            val prompt = "Correct the grammar: '"+input.text.toString()+"'"
+            button.isEnabled = false
+            val prompt = "Correct the grammar: '${input.text}'"
             val generativeModel = GenerativeModel(
-                // The Gemini 1.5 models are versatile and work with most use cases
                 modelName = "gemini-1.5-flash",
-                // Access your API key as a Build Configuration variable (see "Set up your API key" above)
                 apiKey = "AIzaSyCUNb4hglZpsEUajZkmEuZS9R6ppEtImuw"
             )
 
-            runBlocking {
-                val response = generativeModel.generateContent(prompt)
-//                tvResult.text = response.text.toString()
-                val cleanedParagraph = removeAsterisks(response.text.toString())
-                tvResult.text = cleanedParagraph
+            // Using lifecycleScope to ensure tasks are managed properly
+            lifecycleScope.launch(Dispatchers.IO) {
+                var attempt = 0
+                var success = false
+
+                while (attempt < maxRetries && !success) {
+                    try {
+                        val response = generativeModel.generateContent(prompt)
+                        val cleanedParagraph = removeAsterisks(response.text.toString())
+
+                        withContext(Dispatchers.Main) {
+                            tvResult.text = cleanedParagraph
+                            button.isEnabled = true
+                        }
+                        success = true
+                    } catch (e: Exception) {
+                        attempt++
+                        Log.e(tag, "Error generating content", e)
+                        if (attempt >= maxRetries) {
+                            withContext(Dispatchers.Main) {
+                                tvResult.text = "An error occurred. Please try again."
+                                button.isEnabled = true
+                            }
+                        } else {
+                            delay(retryDelayMs)
+                        }
+                    }
+                }
             }
         }
 
         btnClear.setOnClickListener {
             input.text.clear()
+            tvResult.text = "Result:"
         }
     }
 
     private fun removeAsterisks(paragraph: String): String {
-        if (!paragraph.contains("*")) {
-            return paragraph
-        }
         return paragraph.replace("*", "")
     }
 }
