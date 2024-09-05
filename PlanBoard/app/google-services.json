@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1045502117234",
+    "project_id": "planboard-5b762",
+    "storage_bucket": "planboard-5b762.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045502117234:android:730f124081ddf4d18809eb",
+        "android_client_info": {
+          "package_name": "com.example.planboard"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFFDHOsIPo4ZpZQ9O0cdJDcU7WuYeF7CI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
