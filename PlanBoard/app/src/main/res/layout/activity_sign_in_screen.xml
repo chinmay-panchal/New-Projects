@@ -50,7 +50,8 @@
             android:layout_gravity="center"
             android:orientation="vertical">
 
-            <EditText
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/email_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -58,7 +59,8 @@
                 android:textSize="16sp"
                 android:hint="Email"/>
 
-            <EditText
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/password_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -67,6 +69,7 @@
                 android:hint="Password"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSignIn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"

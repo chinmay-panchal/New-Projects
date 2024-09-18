@@ -13,6 +13,9 @@
         android:theme="@style/Theme.PlanBoard"
         tools:targetApi="31">
         <activity
+            android:name=".activities.NewAcitvity"
+            android:exported="false" />
+        <activity
             android:name=".activities.BaseActivity"
             android:exported="false" />
         <activity

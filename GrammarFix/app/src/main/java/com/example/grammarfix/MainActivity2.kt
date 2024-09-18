@@ -40,7 +40,8 @@ class MainActivity2 : AppCompatActivity() {
             val prompt = "Correct the grammar: '${input.text}'"
             val generativeModel = GenerativeModel(
                 modelName = "gemini-1.5-flash",
-                apiKey = "AIcaIzaSyCUNb4hglZpsEUajZkmEuZS9R6ppEtImuw"
+                apiKey = "AIzaSyCrcIWpQZIp1f8uo0Jf24eg6hENSRSgVcU"
+//                        AIzaSyCUNb4hglZpsEUajZkmEuZS9R6ppEtImuw
             )
 
             // Using lifecycleScope to ensure tasks are managed properly
